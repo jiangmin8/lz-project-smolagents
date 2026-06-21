@@ -1,0 +1,3 @@
+2026-06-18 03:51:30,326 - httpx - INFO - HTTP Request: POST http://localhost:8080/v1/chat/completions "HTTP/1.1 200 OK"
+2026-06-18 03:51:30,362 - CalculatorTool - INFO - [Calculator] 输入表达式: sqrt(125)*7 + 100
+2026-06-18 03:51:30,362 - CalculatorTool - INFO - [Calculator] 结果: 178.26237921249265 | 耗时: 0.000s
