@@ -6,20 +6,10 @@ import os
 import logging
 from datetime import datetime
 from smolagents import Tool
+from utils.logger import get_logger
 
-# 配置日志（使用可写目录）
-LOG_DIR = "/media/lz/baba/资料/smolagents_project/logs"
-os.makedirs(LOG_DIR, exist_ok=True)
-
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    handlers=[
-        logging.FileHandler(os.path.join(LOG_DIR, 'tools.log')),
-        logging.StreamHandler()
-    ]
-)
-logger = logging.getLogger('CalculatorTool')
+# 获取日志器
+logger = get_logger('CalculatorTool')
 
 class CalculatorTool(Tool):
     name = "calculator"

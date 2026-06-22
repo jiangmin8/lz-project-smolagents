@@ -4,6 +4,10 @@ Smolagents 配置文件
 import os
 
 class Config:
+    # ===== 项目基础路径 =====
+    PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    LOGS_DIR = os.path.join(PROJECT_ROOT, "logs")
+    
     # ===== 模型配置 =====
     # 方式A: llama server
     LLAMA_SERVER_URL = os.getenv("LLAMA_SERVER_URL", "http://localhost:8080/v1")
@@ -24,7 +28,7 @@ class Config:
 
     # ===== 日志 =====
     LOG_LEVEL = os.getenv("LOG_LEVEL", "INFO")
-    LOG_FILE = "/media/lz/baba/smolagents_project/logs/agent.log"
+    LOG_FILE = os.path.join(LOGS_DIR, "agent.log")
 
     # ===== 工具配置 =====
     ADD_BASE_TOOLS = True
