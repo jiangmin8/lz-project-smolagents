@@ -1,4 +1,23 @@
+# 敏感信息
 .env
+.env.*
+
+# 大模型与权重文件
+*.gguf
+*.bin
+*.pt
+*.safetensors
+*.pth
+
+# 虚拟环境
+*_env/
+.venv/
+venv/
+env/
+
+# 临时与缓存文件
 __pycache__/
 *.pyc
+.scratch/
+logs/
 *.log
